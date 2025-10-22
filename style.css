@@ -1,5 +1,5 @@
 :root {
-  --navy: #17324a;
+  --navy: #0097b2;
   --accent: #f6f9fb;
   --text: #0b1220;
   --muted: #6b7280;
@@ -164,3 +164,4 @@ footer {
     display: flex;
   }
 }
+
