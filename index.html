@@ -5,9 +5,92 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Exotic NC — Tienda de Ropa</title>
   <link rel="icon"type="image/x-icon" href="asset/Rimberio.png" type="image/png">
-  
-</head>
+  <style>
+    :root {
+      --accent: #525254;
+      --muted: #6b7280;
+      --bg: #ffffff;
+      --radius: 10px;
+      --container: 1100px;
+      --gap: 1rem;
+      font-family: "Poppins", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 50; }
+    body { background: var(--bg); color: #111827; line-height: 1.5; }
+    img { max-width: 100%; display: block; border-radius: var(--radius); }
+    a { color: var(--accent); text-decoration: none; }
 
+    header { background:#0097b2 ; border-bottom: 1px solid #e5e7eb; }
+    .container { width: 90%; max-width: var(--container); margin: 0 auto; }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      flex-wrap: wrap;
+      gap: var(--gap);
+    }
+
+    .brand { display: flex; align-items: center; gap: 1rem; }
+    .brand img { width: 70px; height: 70px; object-fit: contain; }
+    .brand-info h1 { font-size: 1.5rem; color: var(--accent); }
+    .brand-info p { font-size: 0.9rem; color: var(--muted); }
+
+    .contact-info { display: flex; flex-direction: column; font-size: 0.9rem; color: var(--muted); }
+    .nav-toggle { background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+    nav a { font-weight: 600; color: var(--accent); }
+    nav a:hover { text-decoration: underline; }
+
+    main { padding: 2rem 0; }
+    section { margin-bottom: 3rem; }
+
+    .hero { text-align: center; }
+    .hero h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .hero p { color: var(--muted); }
+
+    .categories, .products {
+      display: grid;
+      gap: 1.5rem;
+    }
+    .cat-card, .product {
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+    .cat-card img, .product img { width: 100%; height: auto; }
+
+    .cat-card h4, .product h4 { margin-top: 0.5rem; color: var(--accent); }
+    .cat-card p, .product p { color: var(--muted); font-size: 0.9rem; }
+
+    .price { font-weight: bold; color: #1f2937; }
+    .old { text-decoration: line-through; color: var(--muted); margin-left: 0.5rem; }
+    .discount { color: #b91c1c; margin-left: 0.5rem; font-size: 0.9rem; }
+
+    footer { text-align: center; padding: 1rem; border-top: 1px solid #e5e7eb; color: var(--muted); }
+
+    @media (min-width: 700px) {
+      .contact-info { flex-direction: row; gap: 1rem; }
+      .categories { grid-template-columns: repeat(2, 1fr); }
+      .products { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1000px) {
+      .categories { grid-template-columns: repeat(4, 1fr); }
+      .products { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
 <body>
   <header>
     <div class="container topbar">
@@ -24,20 +107,17 @@
         <div>
      <div class="header">
   <div class="logo-section">
-    <img src="assets/logo-NC.png" alt="Logo de la página">
+    <img src="asset/logo NC.png" alt="exotic-NC" class="logo-NC.png">
+  </div>
     <div class="brand-info">
       <h1>Exotic NC</h1>
       <p class="slogan">Ropa exótica · elegante · casual</p>
     </div>
-  </div>
-
-  <div class="contact-info">
-    <span>Tel: <a href="tel:+573101234567">+57 310 123 4567</a></span>
-    <span>Email: <a href="mailto:contact@exoticnc.com">contact@exoticnc.com</a></span>
-    <button class="nav-toggle">☰</button>
+    </div>
+<div class="contact-info">
+  <button class="nav-toggle" aria-label="Abrir menú">☰</button>
   </div>
 </div>
-
     <nav id="mainNav">
       <ul>
         <li><a href="#inicio">Inicio</a></li>
@@ -51,7 +131,7 @@
   <main class="container">
     <section id="inicio" class="hero">
       <h2>Bienvenido a <strong>Exotic NC</strong></h2>
-      <p>Ropa para mujer y hombre — exótica, formal, deportiva, íntima y casual.</p>
+      <p>Ropa para mujer y hombre, exótica, formal, deportiva, íntima y casual.</p>
     </section>
 
     <section id="categorias">
@@ -135,5 +215,6 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
