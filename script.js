@@ -1,7 +1,7 @@
-// Menú responsive (abrir/cerrar)
-const navToggle = document.querySelector('.nav-toggle');
-const nav = document.getElementById('mainNav');
+// Menú responsivo
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.querySelector(".navbar");
 
-navToggle.addEventListener('click', () => {
-  nav.classList.toggle('open');
+menuToggle.addEventListener("click", () => {
+  navbar.classList.toggle("active");
 });
