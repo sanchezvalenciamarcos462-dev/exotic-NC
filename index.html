@@ -1,220 +1,72 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Exotic NC — Tienda de Ropa</title>
-  <link rel="icon"type="image/x-icon" href="asset/Rimberio.png" type="image/png">
-  <style>
-    :root {
-      --accent: #525254;
-      --muted: #6b7280;
-      --bg: #ffffff;
-      --radius: 10px;
-      --container: 1100px;
-      --gap: 1rem;
-      font-family: "Poppins", system-ui, sans-serif;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 50; }
-    body { background: var(--bg); color: #111827; line-height: 1.5; }
-    img { max-width: 100%; display: block; border-radius: var(--radius); }
-    a { color: var(--accent); text-decoration: none; }
-
-    header { background:#0097b2 ; border-bottom: 1px solid #e5e7eb; }
-    .container { width: 90%; max-width: var(--container); margin: 0 auto; }
-
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
-      flex-wrap: wrap;
-      gap: var(--gap);
-    }
-
-    .brand { display: flex; align-items: center; gap: 1rem; }
-    .brand img { width: 70px; height: 70px; object-fit: contain; }
-    .brand-info h1 { font-size: 1.5rem; color: var(--accent); }
-    .brand-info p { font-size: 0.9rem; color: var(--muted); }
-
-    .contact-info { display: flex; flex-direction: column; font-size: 0.9rem; color: var(--muted); }
-    .nav-toggle { background: none; border: none; font-size: 1.5rem; cursor: pointer; }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      padding: 1rem 0;
-    }
-    nav a { font-weight: 600; color: var(--accent); }
-    nav a:hover { text-decoration: underline; }
-
-    main { padding: 2rem 0; }
-    section { margin-bottom: 3rem; }
-
-    .hero { text-align: center; }
-    .hero h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
-    .hero p { color: var(--muted); }
-
-    .categories, .products {
-      display: grid;
-      gap: 1.5rem;
-    }
-    .cat-card, .product {
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      border-radius: var(--radius);
-      padding: 1rem;
-    }
-    .cat-card img, .product img { width: 100%; height: auto; }
-
-    .cat-card h4, .product h4 { margin-top: 0.5rem; color: var(--accent); }
-    .cat-card p, .product p { color: var(--muted); font-size: 0.9rem; }
-
-    .price { font-weight: bold; color: #1f2937; }
-    .old { text-decoration: line-through; color: var(--muted); margin-left: 0.5rem; }
-    .discount { color: #b91c1c; margin-left: 0.5rem; font-size: 0.9rem; }
-
-    footer { text-align: center; padding: 1rem; border-top: 1px solid #e5e7eb; color: var(--muted); }
-
-    @media (min-width: 700px) {
-      .contact-info { flex-direction: row; gap: 1rem; }
-      .categories { grid-template-columns: repeat(2, 1fr); }
-      .products { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (min-width: 1000px) {
-      .categories { grid-template-columns: repeat(4, 1fr); }
-      .products { grid-template-columns: repeat(3, 1fr); }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExoticNC - Ropa Con Estilo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="asset/ExoticNC Logo.png">
 </head>
 <body>
+  <!-- Encabezado -->
   <header>
-    <div class="container topbar">
-      <div class="brand">
-        <a class="logo" href="#">
-          <!-- Logo SVG -->
-          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-            <rect width="64" height="64" rx="10" fill="#f6f9fb"/>
-            <path d="M16 44 C22 36, 42 36, 48 44" fill="none" stroke="#17324a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-            <circle cx="24" cy="24" r="6" fill="#17324a" />
-            <circle cx="40" cy="24" r="6" fill="#17324a" />
-          </svg>
-        </a>
-        <div>
-     <div class="header">
-  <div class="logo-section">
-    <img src="asset/logo NC.png" alt="exotic-NC" class="logo-NC.png">
+    <div class="logo">
+      <img src="asset/Rimberio.png" alt="Logo ExoticNC" class="logo-img">
+    <span>ExoticNC</span>
   </div>
-    <div class="brand-info">
-      <h1>Exotic NC</h1>
-      <p class="slogan">Ropa exótica · elegante · casual</p>
-    </div>
-    </div>
-<div class="contact-info">
-  <button class="nav-toggle" aria-label="Abrir menú">☰</button>
-  </div>
-</div>
-    <nav id="mainNav">
+    <nav class="navbar">
       <ul>
         <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#categorias">Categorías</a></li>
-        <li><a href="#productos">Productos</a></li>
+        <li><a href="#mujeres">Mujeres</a></li>
+        <li><a href="#hombres">Hombres</a></li>
+        <li><a href="#Productos">Productos</a> </li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
   </header>
 
-  <main class="container">
-    <section id="inicio" class="hero">
-      <h2>Bienvenido a <strong>Exotic NC</strong></h2>
-      <p>Ropa para mujer y hombre, exótica, formal, deportiva, íntima y casual.</p>
-    </section>
+  <!-- Sección principal -->
+  <section id="inicio" class="hero">
+    <h1>Ropa De Hombre y Mujer</h1>
+    <p>Encuentra la mejor ropa para hombres y mujeres con estilo y comodidad.</p>
+    <a href="#productos" class="btn">Ver productos</a>
+  </section>
 
-    <section id="categorias">
-      <h3>Categorías</h3>
-      <div class="categories">
-        <div class="cat-card">
-          <img src="https://images.unsplash.com/photo-1520975912132-7f5c5b7a0a5a?q=80&w=800&auto=format&fit=crop" alt="Ropa exótica">
-          <h4>Ropa exótica</h4>
-          <p>Para ocasiones especiales</p>
-        </div>
-        <div class="cat-card">
-          <img src="https://images.unsplash.com/photo-1520975911986-5b9ec3b6f0f7?q=80&w=800&auto=format&fit=crop" alt="Ropa formal">
-          <h4>Ropa formal</h4>
-          <p>Trajes, camisas y vestidos</p>
-        </div>
-        <div class="cat-card">
-          <img src="https://images.unsplash.com/photo-1520975912092-2b7f6d5b6a7b?q=80&w=800&auto=format&fit=crop" alt="Ropa deportiva">
-          <h4>Ropa deportiva</h4>
-          <p>Comodidad y estilo</p>
-        </div>
-        <div class="cat-card">
-          <img src="https://images.unsplash.com/photo-1520975912056-1f8b7b4ee8b9?q=80&w=800&auto=format&fit=crop" alt="Ropa interior">
-          <h4>Ropa interior</h4>
-          <p>Íntima y cómoda</p>
-        </div>
+  <!-- Sección de productos -->
+  <section id="productos" class="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="productos-grid">
+      <div class="producto">
+        <img src="https://via.placeholder.com/250x250" alt="Camiseta deportiva hombre">
+        <h3>Camiseta Hombre</h3>
+        <p>$80.000</p>
       </div>
-    </section>
-
-    <section id="productos">
-      <h3>Productos destacados</h3>
-      <div class="products">
-        <div class="product">
-          <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200&auto=format&fit=crop" alt="Vestido exótico rojo">
-          <div class="info">
-            <h4>Vestido "Luna Roja"</h4>
-            <p>Marca: Aria Luxe</p>
-            <p class="price">$120.000 <span class="old">$160.000</span> <span class="discount">-25%</span></p>
-            <p>Tallas: S · M · L · XL</p>
-            <p>Colores: rojo, negro, blanco</p>
-          </div>
-        </div>
-
-        <div class="product">
-          <img src="https://images.unsplash.com/photo-1541099649107-2a60f0f2f9a5?q=80&w=1200&auto=format&fit=crop" alt="Traje formal hombre">
-          <div class="info">
-            <h4>Traje "Monarch"</h4>
-            <p>Marca: Noble Tailor</p>
-            <p class="price">$220.000 <span class="old">$260.000</span> <span class="discount">-15%</span></p>
-            <p>Tallas: 38 · 40 · 42 · 44</p>
-            <p>Colores: azul marino, gris</p>
-          </div>
-        </div>
-
-        <div class="product">
-          <img src="https://images.unsplash.com/photo-1520975912126-9c3eb3f2c1a5?q=80&w=1200&auto=format&fit=crop" alt="Conjunto deportivo mujer">
-          <div class="info">
-            <h4>Conjunto "Flex"</h4>
-            <p>Marca: MotionWear</p>
-            <p class="price">$85.000 <span class="old">$95.000</span> <span class="discount">-10%</span></p>
-            <p>Tallas: XS · S · M · L</p>
-            <p>Colores: verde, amarillo</p>
-          </div>
-        </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/250x250" alt="Leggins mujer">
+        <h3>Leggins Mujer</h3>
+        <p>$95.000</p>
       </div>
-    </section>
-
-    <section id="contacto">
-      <h3>Contacto y pedidos</h3>
-      <p>Escríbenos por teléfono o correo para pedidos y cotizaciones.</p>
-      <div class="contact-box">
-        <div><strong>Teléfono:</strong> +57 310 123 4567</div>
-        <div><strong>Email:</strong> contact@exoticnc.com</div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/250x250" alt="Chaqueta deportiva">
+        <h3>Chaqueta Deportiva</h3>
+        <p>$120.000</p>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- Contacto -->
+  <section id="contacto" class="contacto">
+    <h2>Contáctanos</h2>
+    <p>Correo: contacto@exoticnc.com</p>
+    <p>Teléfono: +57 300 123 4567</p>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Exotic NC · Todos los derechos reservados</p>
+    <p>&copy; 2025 ExoticNC. Todos los derechos reservados.</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
