@@ -88,28 +88,47 @@ header {
   }
 }
 
-/* ===== RESPONSIVO ===== */
-@media (min-width: 769px) {
-  .menu-toggle {
-    display: none; /* Oculta el ícono en escritorio */
-  }
-
+/* ===== RESPONSIVO - MENÚ DESLIZANTE ===== */
+@media (max-width: 768px) {
   .navbar {
-    display: flex !important;
-    position: static;
-    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #0097b2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.4s ease;
+    z-index: 200;
   }
 
   .navbar ul {
-    margin: 0;
-    background: none;
-    border-radius: 0;
-    padding: 0;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .navbar.active {
+    left: 0;
   }
 
   .navbar ul li a {
+    font-size: 1.3em;
+  }
+
+  .menu-toggle {
+    display: block;
     color: white;
-    font-size: 1em;
+    font-size: 1.8em;
+    cursor: pointer;
+    z-index: 300;
+  }
+
+  /* Oscurecer fondo al abrir menú (opcional) */
+  body.menu-open {
+    overflow: hidden;
   }
 }
 
@@ -117,10 +136,16 @@ header {
 /* Hero section */
 .hero {
   text-align: center;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url("https://images.unsplash.com/photo-1606813907299-d86efa9b0c84?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url("asset/fondo.jpg") center center / cover no-repeat;
   color: white;
-  padding: 100px 20px;
+  padding: 120px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* ocupa la mayor parte de la pantalla */
+  transition: background-position 0.3s ease;
 }
 
 .hero h1 {
@@ -131,6 +156,7 @@ header {
 .hero p {
   font-size: 1.2em;
   margin-bottom: 25px;
+  max-width: 600px;
 }
 
 .btn {
@@ -144,8 +170,25 @@ header {
 }
 
 .btn:hover {
-  background-color: #0097b2;
+  background-color: #007b8a;
 }
+
+/* Ajuste responsive */
+@media (max-width: 768px) {
+  .hero {
+    background-position: center;
+    padding: 100px 15px;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+}
+
 
 /* Productos */
 .productos {
@@ -221,4 +264,28 @@ footer {
     display: block;
     color: white;
   }
+}
+
+/* Ocultar botón del menú en pantallas grandes */
+.menu-toggle {
+  display: none;
+}
+
+/* Mostrarlo solo en formato móvil */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.mujeres {
+  background-color: #f8f8f8;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hombres {
+  background-color: #e9f4f7;
+  padding: 60px 20px;
+  text-align: center;
 }
